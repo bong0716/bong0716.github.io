@@ -45,19 +45,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 html {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1300px;
-    font-family: 'swap', 'Gelasio', 'Nanum Myeongjo', serif;
-    color: #2c3e50;
+	height: 100%;
+	margin: 10;
+	padding: 0;
+	font-family: 'swap', 'Gelasio', 'Nanum Myeongjo', serif;
+	color: #2c3e50;
 }
 
 .custom-font {
