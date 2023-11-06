@@ -102,15 +102,17 @@ code {
 }
 
 .sidebar {
-	/*position: fixed;*/
+	position: fixed;
 	display: flex;
 	flex-flow: column nowrap;
-	flex: 0 0 220px;
 	padding: 15px;
 	z-index: 1;
 	background-color: #222;
 	color: #fff;
-}
+	font-size: 20px;
+	height: 100%;
+	width: 15%; 
+  }
 
 .sidebar-item {
 	display: block;
@@ -242,7 +244,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-	font-family: "Roboto", "Nanum Gothic";
+	font-family: "Nanum Gothic";
 	color: #333;
   	margin-bottom: 0;
 }
@@ -262,9 +264,9 @@ article.home h4 a:hover {
 
 header.post-header {
 	padding: 50px 0px 10px 0px;
-	margin-bottom: 30px;
 	border-bottom: 1px solid #ccc;
-	text-align: center;
+	text-align: left;
+	margin: 70px 200px 50px 550px;
 }
 
 header.home {
@@ -272,7 +274,7 @@ header.home {
 }
 
 .post-title {
-	font-size: 1.5em;
+	font-size: 1.7em;
 	color: #111;
 	font-weight: bold;
 }
@@ -284,6 +286,11 @@ header.home {
 	font-size: 0.8em;
 	display: inline-block;
 	width: 80px;
+}
+
+.post-content {
+    margin: 0px 200px 0px 550px;
+	font-family: "Nanum Gothic"; 
 }
 
 .author .author-image {
@@ -308,8 +315,29 @@ footer {
 	color: #ccc;
 }
 
+@media (max-width: 1500px) {
+	.post-content,
+	header.post-header {
+		margin: 30px 0px 0px 120px; 
+	  }
+	
+	.sidebar {
+	position: fixed;
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 15px;
+	z-index: 1;
+	background-color: #222;
+	color: #fff;
+	font-size: 15px;
+	height: 100%;
+	width: 15%; 
+	}
+	
+	
+}
 
-@media (max-width: 576px) {
+@media (max-width: 800px) {
 	article {
 		font-size: 0.9em;
 		line-height: 1.5;
@@ -323,10 +351,7 @@ footer {
 	}
 
 	.sidebar {
-		font-size: 0.8em;
-		flex: 0 0 auto;
-		flex-flow: row nowrap;
-		height: auto;
+		display: none;
 	}
 
 	.sidebar-nav {
@@ -346,4 +371,9 @@ footer {
 		visibility: hidden;
 		display: none;
 	}
+
+	.post-content,
+	header.post-header {
+		margin: 30px 0px 0px 0px; 
+	  }
 }
