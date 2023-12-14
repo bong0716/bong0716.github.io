@@ -39,6 +39,13 @@ category_dir: category/
 tag_dir: tag/
 social:
   github: hyejinyoon20010716
+analytics:
+  provider               : "google-gtag" 
+ # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-WERFRSDRDL"
+    anonymize_ip         : # true, false (default)
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
