@@ -325,6 +325,12 @@ footer {
 	color: #ccc;
 }
 
+div.giscus {
+    width: 60%;
+    margin-left: 550px;
+	margin-bottom: 200px;
+}
+
 @media (max-width: 1500px) {
 	.post-content,
 	header.post-header {
@@ -344,7 +350,12 @@ footer {
 	width: 15%; 
 	}
 	
-	
+	div.giscus {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 100px;
+	}
 }
 
 @media (max-width: 800px) {
@@ -386,4 +397,11 @@ footer {
 	header.post-header {
 		margin: 30px 0px 0px 0px; 
 	  }
+
+	  div.giscus {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 100px;
+	}
 }

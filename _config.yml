@@ -46,7 +46,7 @@ analytics:
     tracking_id          : "G-WERFRSDRDL"
     anonymize_ip         : # true, false (default)
 
-disqus_shortname: https-hyejinyoon20010716-github-io.disqus.com
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
