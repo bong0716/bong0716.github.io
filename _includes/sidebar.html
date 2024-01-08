@@ -3,6 +3,16 @@
 		<h3><a href="/">{{ site.title }}</a></h3>
 	</div>
 	<p class="lead">{{ site.description }}</p>
+	
+	<!-- 프로필 이미지 -->
+    <div class="profile-image">
+        <img src="../public/img/profile.jpg" alt="프로필 이미지">
+        <!-- 이미지가 없는 경우 기본 아이콘 -->
+        <svg class="svg-icon grey">
+            <use xlink:href="{{ '/assets/minima-social-icons.svg#기본_아이콘' | relative_url }}" />
+        </svg>
+    </div>
+
 	{%- if social.github -%}
 		<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
 			<svg class="svg-icon grey">
