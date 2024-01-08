@@ -276,7 +276,7 @@ header.post-header {
 	padding: 50px 0px 10px 0px;
 	border-bottom: 1px solid #ccc;
 	text-align: left;
-	margin: 70px 200px 50px 550px;
+	margin: 70px 10% 50px 30%;
 }
 
 header.home {
@@ -299,7 +299,7 @@ header.home {
 }
 
 .post-content {
-    margin: 0px 200px 0px 550px;
+    margin: 0px 10% 0px 30%;
 	font-family: "Nanum Gothic"; 
 }
 
@@ -331,7 +331,7 @@ div.giscus {
 	margin-bottom: 200px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
 	.post-content,
 	header.post-header {
 		margin: 30px 0px 0px 120px; 
@@ -358,14 +358,15 @@ div.giscus {
 	}
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 1200px) {
 	article {
 		font-size: 0.9em;
 		line-height: 1.5;
 	}
 
 	.content {
-		padding: 0px;
+		padding: 20px;
 	}
 	.container {
 	    flex-direction: column;
