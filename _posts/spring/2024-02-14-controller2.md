@@ -38,3 +38,5 @@ public class QueryPathController{
 
 
 SpringBoot에서는 거의 주소 변수매핑 방식을 사용한다고 한다!
+
+<br>
