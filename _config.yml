@@ -35,7 +35,7 @@ highlighter-theme: monokai
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter:
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
