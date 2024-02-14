@@ -32,6 +32,10 @@ svg:
 # Build settings
 # theme: minima
 highlighter-theme: monokai
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
