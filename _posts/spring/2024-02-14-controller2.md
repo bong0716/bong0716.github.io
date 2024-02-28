@@ -8,6 +8,8 @@ categories: "Spring"
 
 <br>
 
+### 쿼리스트링과 주소변수매핑 실습
+---
 ```java
 @RestController
 public class QueryPathController{

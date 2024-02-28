@@ -83,7 +83,7 @@ public class HttpBodyController {
     private static final Logger log = LoggerFactory.getLogger(HttpBodyController.class);
 
     @PostMapping("/body3")
-    public String applicationjson(@RequestBody String data) { // json형식의 경우 @RequestBody 어노테이션을 붙여주면 {"username" : "홍길동"}이 그대로 날라옴.
+    public String applicationjson(@RequestBody String data) { // json형식의 경우 @RequestBody 어노테이션을 붙여주면 {"username" : "홍길동"}이 그대로 날라옴.  
 
         log.info(data);
         return "application/json 전송옴";
@@ -97,5 +97,5 @@ public class HttpBodyController {
     }
 }
 ``` 
-Json형식의 경우 @RequestBody 어노테이션을 붙여주면 {"username" : "홍길동"}이 그대로 날라온다.   
+Json형식의 경우 @RequestBody 어노테이션을 붙여주면 {"username" : "홍길동"}이 그대로 날라온다. MessageConverter가 자동으로 JavaObject를 Json으로 변경해서 통신을 통해 응답 해주는 것. @RestController 일때만 MessageConverter가 작동함.  
 User 클래스를 만들어 Java 객체로 받아주면 Data 값만 받아오는게 가능하다.
