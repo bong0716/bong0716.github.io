@@ -29,7 +29,8 @@ addAttribute 메서드는 Model 인터페이스에서 제공하는 메서드 중
 
 **[Model을 사용하여 View 페이지로 데이터 값 넘기기]** 
  ```java
-@Controller oller {
+@Controller 
+public class JavaToJspController {
 
     @GetMapping("/jsp/java/model")
     public String jspToJavaToModel(Model model) { // Model 선언
@@ -45,6 +46,7 @@ addAttribute 메서드는 Model 인터페이스에서 제공하는 메서드 중
  ```
  컨트롤러에서는 Model을 파라미터로 받아 이를 활용해 뷰로 데이터를 전달하고, addAttribute 메서드를 사용하여 전달할 데이터를 설정한다. 이렇게 함으로써 뷰는 컨트롤러가 전달한 데이터를 활용하여 동적으로 페이지를 생성할 수 있다. 
 
+---
 <br>
 
 **[Model로 넘어온 데이터 값을 View 페이지에서 출력하기]**   
@@ -65,10 +67,12 @@ addAttribute 메서드는 Model 인터페이스에서 제공하는 메서드 중
 ``` 
 데이터 값을 출력하기 위해선 ${} 안에 key 값을 적어주면 된다. 
 
+---
 <br><br><br>
 
 <p align="center"><img src="https://github.com/bong0716/bong0716.github.io/assets/119990564/275a19e8-e116-4ab9-88cc-e0929079d4c7"></p>
 <p align="center">
-제대로 출력되는지 확인!
+<제대로 출력되는지 확인!>
+</p>
 
 

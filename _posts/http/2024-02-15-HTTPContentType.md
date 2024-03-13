@@ -36,7 +36,8 @@ Content-Type은 POST와 PUT 요청 땐 필수사항이고, GET과 DELETE 요청 
 
 <br>
 
-## 실습 
+## 실습
+--- 
 **[x-www-form-urlencoded]**
 ```java
 @RestController
@@ -54,6 +55,7 @@ public class HttpBodyController {
 ```
 매개변수명이 전송된 데이터의 key 값과 일치해야 받을 수 있다.
 
+---
 <br>
 
 **[text/plain]**
@@ -73,6 +75,7 @@ public class HttpBodyController {
 ```
 text/plain 형식의 데이터를 받으려면 @RequestBody 어노테이션을 붙여주어야 한다.
 
+---
 <br>
 
 **[application/json]**
