@@ -39,8 +39,11 @@ kramdown:
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 category_dir: category/
 tag_dir: tag/
+paginate: 8
+paginate_path: "/posts/page/:num"
 social:
   github: hyejinyoon20010716
 analytics:
