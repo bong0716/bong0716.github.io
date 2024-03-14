@@ -342,8 +342,7 @@ footer {
 
 div.giscus {
     width: 60%;
-    margin-left: 550px;
-	margin-bottom: 200px;
+    margin: 0px 10% 0px 30%;
 }
 
 @media (max-width: 1000px) {
@@ -367,9 +366,18 @@ div.giscus {
 	
 	div.giscus {
 		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 100px;
+		margin: 0px 10% 0px 30%;
+	}
+
+	.pagination {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.pagination li {
+	display: inline; /* 리스트 아이템을 인라인 요소로 표시하여 줄바꿈을 없앰 */
+	margin-right: 5px; /* 각 리스트 아이템 사이의 간격 조절 */
 	}
 }
 
@@ -414,10 +422,19 @@ div.giscus {
 		margin: 30px 0px 0px 0px; 
 	  }
 
-	  div.giscus {
+	div.giscus {
 		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 100px;
+		margin: 0px 10% 0px 30%;
+	}
+
+	.pagination {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.pagination li {
+	display: inline; /* 리스트 아이템을 인라인 요소로 표시하여 줄바꿈을 없앰 */
+	margin-right: 5px; /* 각 리스트 아이템 사이의 간격 조절 */
 	}
 }
