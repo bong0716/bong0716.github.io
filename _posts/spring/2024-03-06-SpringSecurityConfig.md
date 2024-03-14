@@ -13,7 +13,7 @@ categories: "Spring"
 
 <br>
 
-## 그 전에 알아야할 것
+## 🔎그 전에 알아야할 것
 ---
 ### SecurityConfig를 설정해주는 이유?
 사용자가 시스템에 로그인할 때 인증되어야 하고, 인증된 사용자에게는 특정한 권한이나 역할을 부여하여 특정 리소스에 접근할 수 있도록 해야 한다. SecurityConfig는 이러한 인증 및 인가 규칙을 정의하여 시스템의 보안을 관리하는데 유용하다.
@@ -47,7 +47,7 @@ public class SecurityConfig {
 	
 	private final OAuth2DetailsService oAuth2DetailsService;
 	
-	@Bean
+	@Bean // 회원가입 시 비밀번호 암호화를 위해 Bean으로 등록해줌. 지금은 몰라도 그냥 넘어가기
 	BCryptPasswordEncoder encoder() {
 		return new BCryptPasswordEncoder();
 	}
@@ -73,31 +73,29 @@ public class SecurityConfig {
 
 ```
 
-1. > `http.csrf().disable();`   
-CSRF(Cross-Site Request Forgery) 공격 방지 기능을 비활성화( RESTful API를 사용할 때는 CSRF 토큰을 사용하지 않는 것이 일반적임)
+> ## `http.csrf().disable();`   
+CSRF(Cross-Site Request Forgery) 공격 방지 기능을 비활성화.( RESTful API를 사용할 때는 CSRF 토큰을 사용하지 않는 것이 일반적임)
 
-2. > `.antMatchers("/", "/user/**", "/image/**", "/subscribe/**", "/comment/**", "/api/**").authenticated()`   
-해당 주소에 대해선 인증이 필요 
+> ## `.antMatchers("/", "/user/**", "/image/**", "/subscribe/**", "/comment/**", "/api/**").authenticated()`   
+인증 받을 주소들을 설정. 
 
-3. > `.and()`  
-  `.formLogin()`  
-  `.loginPage("/auth/signin")`  
+> ## `.and().formLogin().loginPage("/auth/signin")`  
   인증이 필요한 페이지로 요청이 왔을 때, 리다이렉트 되는 로그인 페이지 경로를 "/auth/signin"으로 설정   
 
-4. > `.loginProcessingUrl("/auth/signin")`  
+> ## `.loginProcessingUrl("/auth/signin")`  
   실제로 로그인을 처리하는 URL을 설정   
 
 
-5. > `.defaultSuccessUrl("/")`  
+> ## `.defaultSuccessUrl("/")`  
   로그인이 정상적으로 수행됐으면 "/"로 이동   
 
-6. > `.oauth2Login()`  
+> ## `.oauth2Login()`  
   OAuth 2.0 프로바이더를 사용하여 로그인을 처리   
 
-7. > `.userInfoEndpoint()`  
+> ## `.userInfoEndpoint()`  
   OAuth 2.0 로그인을 통해 사용자 정보를 얻을 때 사용되는 엔드포인트를 설정   
 
-8. > `.userService(oAuth2DetailsService)`  
+> ## `.userService(oAuth2DetailsService)`  
   OAuth 2.0 로그인 후에 사용자 정보를 처리하는데 사용되는 사용자 서비스를 지정   
 
 <br>

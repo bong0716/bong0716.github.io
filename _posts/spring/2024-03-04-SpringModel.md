@@ -14,7 +14,7 @@ categories: "Spring"
 
 <br>
 
-## 그 전에 알아야할 것
+## 🔎그 전에 알아야할 것
 ---
 ### Model?   
 Model은 Spring Framework에서 사용되는 인터페이스로, 컨트롤러에서 뷰로 데이터를 전달하는 데 사용된다.      
