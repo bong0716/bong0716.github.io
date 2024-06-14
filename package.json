@@ -174,5 +174,7 @@
       ],
       "@semantic-release/github"
     ]
-  }
+  },
+  "main": "purgecss.config.js",
+  "keywords": []
 }
