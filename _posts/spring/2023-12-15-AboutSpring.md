@@ -7,7 +7,7 @@ categories: "Spring"
 <br>
 
 <div style="text-align:center;">
-  <img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/55d2c872-7f4a-4ece-a182-f099a16c1650" alt="spring logo" width="50%" height="10%">   
+  <img src="https://github.com/bong0716/photogram/assets/119990564/2f712f21-7a44-4b07-9e60-505622a82187" alt="spring logo">   
 </div>
 
 <br><br>

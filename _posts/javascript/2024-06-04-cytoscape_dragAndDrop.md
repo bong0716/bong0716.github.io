@@ -5,7 +5,7 @@ date: 2024-06-04 13:00:23 +0900
 categories: "JavaScript"
 ---
 
-![cytologo](https://github.com/bong0716/bong0716.github.io/assets/119990564/0971cb51-8302-42ae-adf1-0d0cdd5d7f51)
+![cytologo](https://github.com/bong0716/photogram/assets/119990564/d3c6d9d1-93ee-4270-b429-0f6cee4139fd)
 
 <br>
 
@@ -30,10 +30,10 @@ npm을 사용하기 때문에 node.js를 설치해야 한다. npm을 사용하�
 
 <br>
 
-![dl](https://github.com/bong0716/bong0716.github.io/assets/119990564/7d9fcc4d-6885-4be5-8584-a170b3dc90ba)
+![js](https://github.com/bong0716/photogram/assets/119990564/403f93ac-68dd-46ca-9ce3-b02f374c1ff5)
 <p align="center">(js 디렉토리 아래 플러그인 파일들을 위치시킨 후)</p> <br>
 
-<p align="center"><img src="https://github.com/bong0716/bong0716.github.io/assets/119990564/fdf96998-9e76-4fb0-8c9c-131779922036"></p>
+<p align="center"><img src="https://github.com/bong0716/photogram/assets/119990564/90879c47-7d31-45e5-b156-13b6d40219a9"></p>
 <p align="center">(html 파일 header 안에 넣어줬다.)</p> <br>
 이게 번거로우면 node.js를 설치하고 [여기 나온 것처럼](https://codesandbox.io/p/sandbox/cytoscape-demo-forked-eqb4nj?file=%2Findex.html%3A11%2C26) 자바스크립트 파일에 플러그인을 import하면 된다.
 
@@ -183,10 +183,10 @@ if (overlappingNodes.length > 0) {
 
 ---
 
-![수정 전](https://github.com/bong0716/bong0716.github.io/assets/119990564/c6990d70-0cca-42a4-b995-ccd23f871685)
+![수정 전](https://github.com/bong0716/photogram/assets/119990564/c95557a6-0d0b-4cd1-8460-b80799134a97)
 <p align="center">(수정 전)</p> <br>
 
-![수정 전](https://github.com/bong0716/bong0716.github.io/assets/119990564/c9300d0f-22c5-4cda-a5cd-ec5e9b221eb2)
+![수정 전](https://github.com/bong0716/photogram/assets/119990564/b14a0691-d760-4a30-9aa0-5cc50c55a89c)
 <p align="center">(수정 후)</p> <br>
 
 ---
