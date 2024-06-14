@@ -1,0 +1,23 @@
+<article class="post">
+  <header class="post-header home">
+    <div class="post-title">전체 글</div>
+  </header>
+
+  <div class="post-content">
+    <ul class="post-list">
+      {%- for post in paginator.posts -%}
+      <li class="post-list-item">
+        {%- assign date_format = "%Y/%m/%d" -%}
+        <span class="post-date">{{ post.date | date: date_format }}</span>
+      	<a class="post-link" href="{{ post.url | relative_url }}">
+    	    {{ post.title | escape }}
+		</a>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</article>
+<section style="text-align: center;">{%- include pagination.html -%}</section>

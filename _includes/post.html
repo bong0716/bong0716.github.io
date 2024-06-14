@@ -1,0 +1,36 @@
+<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			{{ page.title | escape }}
+		</div>
+		<time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+			{%- assign date_format = site.date_forma | default: "%Y/%m/%d" -%}
+			{{ page.date | date: date_format }}
+		</time>		
+	</header>
+
+	<div class="post-content">
+		{{ content }}
+	</div>
+        <br><br><br>
+
+        <div style="text-align: center;">
+	<script src="https://giscus.app/client.js"
+        data-repo="hyejinyoon20010716/hyejinyoon20010716.github.io"
+        data-repo-id="R_kgDOJVgZEg"
+        data-category="General"
+        data-category-id="DIC_kwDOJVgZEs4Cbvxz"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+	</script>
+        </div>
+
+</article>
