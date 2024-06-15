@@ -3,6 +3,7 @@ layout: post
 title: "[Spring] Controller(컨트롤러)란? | 동작 이해와 사용 방법"
 date: 2024-02-13 10:00:23 +0900
 categories: "Spring"
+tag: Spring
 ---  
 아이티윌의 국비지원 [스프링부트 SNS 포토그램 프로젝트] 강의를 수강하며 정리한 내용입니다.
 

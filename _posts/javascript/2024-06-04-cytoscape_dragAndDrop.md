@@ -3,6 +3,7 @@ layout: post
 title: "[JavaScript] cytoscape compound-drag-and-drop 구현"
 date: 2024-06-04 13:00:23 +0900
 categories: "JavaScript"
+tag: ["JavaScript", "svg"]
 ---
 
 ![cytologo](https://github.com/bong0716/photogram/assets/119990564/d3c6d9d1-93ee-4270-b429-0f6cee4139fd)

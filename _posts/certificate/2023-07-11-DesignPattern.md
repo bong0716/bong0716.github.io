@@ -3,6 +3,7 @@ layout: post
 title: "[정보처리기사] 실기 개념정리 |  디자인 패턴"
 date: 2023-07-11 14:00:23 +0900
 categories: "Certificate"
+tag: Study
 ---
 
 출처 : 정보처리기사 실기 수제비 
