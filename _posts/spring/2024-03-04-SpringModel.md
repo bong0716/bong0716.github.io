@@ -61,7 +61,7 @@ public class JavaToJspController {
 <title>Insert title here</title>
 </head>
 <body>
-<h1>This is jsp</h1>
+<h1>This is e</h1>
 <h3>${username}</h3>
 </body>
 </html>
@@ -71,7 +71,7 @@ public class JavaToJspController {
 ---
 <br><br><br>
 
-<p align="center"><img src="https://github.com/bong0716/bong0716.github.io/assets/119990564/275a19e8-e116-4ab9-88cc-e0929079d4c7"></p>
+![1](https://github.com/bong0716/photogram/assets/119990564/f42dfbdf-3795-45b5-b974-e3eb4c279eec)
 <p align="center">
 <제대로 출력되는지 확인!>
 </p>
