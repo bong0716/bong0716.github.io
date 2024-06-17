@@ -49,15 +49,16 @@ public class HttpRespController {
 
 <br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/7ccf244b-12b9-45da-8391-6c342a771311"></p>
-<p align="center"><br>
-Spring 프레임워크에서 정적 파일들은 resources/static 폴더 내부가 디폴트 경로이다.(약속) <br>   
+![1](https://github.com/bong0716/photogram/assets/119990564/58cb806d-2c88-4a4d-87bc-1737dfa49e9c)    
+<p align="center">
+Spring 프레임워크에서 정적 파일들은 resources/static 폴더 내부가 디폴트 경로이다.(약속)      
+</p>
+<p align="center">
 *정적 파일? image, txt, mp3 등 
 </p>
-
 <br>
+![2](https://github.com/bong0716/photogram/assets/119990564/6fbe9ce3-02ef-46fb-a19a-0eb30a0b2643) 
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/1cb68663-fa5d-4194-aeb2-0d256f19c39f"></p><br>
 
 <p align="center"><br>
 resources/static 내부에 a.txt 파일을 생성하여 내용을 입력한 후 실행하면
@@ -66,7 +67,7 @@ resources/static 내부에 a.txt 파일을 생성하여 내용을 입력한 후 
 
 <br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/24474b4c-555b-4d3a-9e34-ad4791033ca0"></p>
+![3](https://github.com/bong0716/photogram/assets/119990564/e4af365d-cae3-4b94-b6e8-90f14dee8b23) 
 
 <p align="center">
 => 파일 속 내용을 브라우저가 읽는 것을 확인할 수 있다. 
@@ -90,33 +91,35 @@ public class HttpRespController {
 
 <br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/3d2d83d9-4079-4e4c-a61c-ed69b597b20f"></p>
 
-<br>
 
-<p align="center">
-마찬가지로 static 폴더 아래에 b.html 파일 생성 후 우클릭 -> Refactor -> Rename 확장자를 .mustache로 변경 후 아래 코드 입력 
-</p>
-
-<br>
-
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/e415b149-80f6-4173-90b8-3175b15ccd50"></p>
-
-<br>
+![4](https://github.com/bong0716/photogram/assets/119990564/4a8638b5-b865-4178-a799-a2f3a20f1eee)
 
 <p align="center">
-서버 실행 후 http://localhost:8080/mus를 브라우저에 띄우기
+마찬가지로 static 폴더 아래에 b.html 파일 생성 후 우클릭 -> Refactor -> Rename 확장자를 .mustache로 변경 후 
 </p>
 
-<br>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>This is mustache</h1>
+</body>
+</html>
+```
+<p align="center">위 내용 입력</p>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/2875651a-692c-4de5-a864-80a0d26f30dc"></p>
+<p align="center">
+서버 실행 후 http://localhost:8080/mus를 브라우저에 띄우면?
+</p>
 
-<br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/81b60a22-d9b2-436e-ae0e-72a4112202e1"></p>
+![5](https://github.com/bong0716/photogram/assets/119990564/103f4b0a-ffcb-4eee-8a05-a7483cee1a2c)
 
-<br>
 
 <p align="center">
  b.mustache 파일을 다운로드 해버린다.
@@ -135,11 +138,11 @@ public class HttpRespController {
     }
 }
 ```
-그렇다면 해결 방법은? static 폴더에서 templates 폴더로 경로를 이동 시키고 컨트롤러의 return문에서 확장자를 지우면 된다. 확장자를 지워도 잘 찾아가는 이유는 spring에서 mustache를 지원하기 때문이다. 
+그렇다면 해결 방법은? static 폴더에서 templates 폴더로 경로를 이동 시키고(없다면 생성) 컨트롤러의 return문에서 확장자를 지우면 된다. 확장자를 지워도 잘 찾아가는 이유는 spring에서 mustache를 지원하기 때문이다. 
 
 <br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/33b14f0c-db84-487d-86b9-45034cf342c8"></p>
+![mus2](https://github.com/bong0716/photogram/assets/119990564/49805e9b-b465-4831-8774-ae4cf9be3a8c)
 
 <p align="center">
 다시 실행해보면 제대로 응답하는 것을 확인할 수 있다. <br>   
@@ -154,7 +157,7 @@ public class HttpRespController {
 
 <br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/b0fcdc9d-a438-47e1-a3e3-aa62df9b7b01"></p>
+![JSP1](https://github.com/bong0716/photogram/assets/119990564/34610a03-0c26-4a07-872e-1a47ae9b7a2e)
 
 <p align="center">
 jsp 사용시 디폴트 경로는 src/main/webapp이다. WEB-INF/views까지 직접 생성해 주기  
@@ -162,10 +165,22 @@ jsp 사용시 디폴트 경로는 src/main/webapp이다. WEB-INF/views까지 직
 
 <br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/9349f545-6350-4657-8947-ecf0230bbc05"></p>
-<p align="center">
-views 아래에 c.jsp 파일 생성 후 코드 입력.
-</p>
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>This is c.JSP</h1>
+</body>
+</html>
+```
+<p align="center">views 아래에 c.jsp 파일 생성 후 코드 입력.</p>
+
 <br>
 
 ```java
@@ -180,24 +195,20 @@ public class HttpRespController {
 ```
 
 <p align="center">
-컨트롤러까지 생성 후 실행시키면 Whitelabel Error Page가 뜬다. return "c"; 만으로는 jsp 파일을 찾을 수 없기 떄문이다. 이는 스프링 부트가 jsp를 지원하지 않기 때문이므로 별도의 설정이 필요하다. 
+컨트롤러까지 생성 후 실행시키면 Whitelabel Error Page가 뜬다. return "c"; 만으로는 jsp 파일을 찾을 수 없기 떄문이다. 이는 <strong>스프링 부트가 jsp를 지원하지 않기 때문이므로 별도의 설정이 필요</strong>하다. 
 </p>
 
 <br><br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/1cd6fffb-a068-4f73-bf68-042554744e95"></p>
-
-<br>
-
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/191efae8-0fd4-4500-b058-dbeac9d854ab"></p>
+![JSP2](https://github.com/bong0716/photogram/assets/119990564/10c177ee-8af8-4962-a73b-b6511fb8368c)
 
 <p align="center">
-properties로 되어 있는 걸 yml로 변경
+application.properties로 되어 있는 걸 application.yml로 변경
 </p>
 
 <br><br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/442234c9-690e-443e-98fd-a73c1dac10da"></p>
+![JSP3](https://github.com/bong0716/photogram/assets/119990564/a134e9de-ba8f-4424-acad-7aa6380f4ecf)
 
 <p align="center">
 application.yml에 입력하기. ViewResolver를 설정해주는 것!
@@ -211,7 +222,7 @@ spring.mvc.view.prefix 입력 후 ctrl + space 누르면 알아서 줄 바꿈 �
 
 <br><br>
 
-<p align="center"><img src="https://github.com/hyejinyoon20010716/hyejinyoon20010716.github.io/assets/119990564/8dcdafe4-98ce-4bcf-b206-ba443fad834c"></p>
+![JSP4](https://github.com/bong0716/photogram/assets/119990564/0b573a60-a7a3-4cad-be4c-61160a20f782)
 
 <p align="center"> 
 페이지가 제대로 뜬다면 설정 성공이다. 
