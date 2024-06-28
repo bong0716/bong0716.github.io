@@ -90,7 +90,11 @@ public class AuthService {
 > 사용자의 역할을 "ROLE_USER"로 설정. 
 
 ---
+
+![123](https://github.com/bong0716/photogram/assets/119990564/73a7d91b-b692-4d8f-83f3-1b1b8218d52d)
+
 <br>
+DB에 비밀번호가 암호화 되어 있는 것을 확인!   
 같은 이름으로 회원가입을 했을 때 오류 페이지가 뜨는 것을 확인했다면 성공!
 
 
