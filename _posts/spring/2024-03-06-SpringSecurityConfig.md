@@ -74,30 +74,14 @@ public class SecurityConfig {
 
 ```
 
-> ## `http.csrf().disable();`   
+> ## `http.csrf(csrf -> csrf.disable())`   
 CSRF(Cross-Site Request Forgery) 공격 방지 기능을 비활성화.( RESTful API를 사용할 때는 CSRF 토큰을 사용하지 않는 것이 일반적임)
 
-> ## `.antMatchers("/", "/user/**", "/image/**", "/subscribe/**", "/comment/**", "/api/**").authenticated()`   
+> ## `.antMatchers("/", "/user/**", "/image/**", "/subscripbe/**", "/comment/**").authenticated()`   
 인증 받을 주소들을 설정. 
 
-> ## `.and().formLogin().loginPage("/auth/signin")`  
+> ## `.formLogin(formLogin -> formLogin.loginPage("/auth/signin").defaultSuccessUrl("/")`  
   인증이 필요한 페이지로 요청이 왔을 때, 리다이렉트 되는 로그인 페이지 경로를 "/auth/signin"으로 설정   
-
-> ## `.loginProcessingUrl("/auth/signin")`  
-  실제로 로그인을 처리하는 URL을 설정   
-
-
-> ## `.defaultSuccessUrl("/")`  
-  로그인이 정상적으로 수행됐으면 "/"로 이동   
-
-> ## `.oauth2Login()`  
-  OAuth 2.0 프로바이더를 사용하여 로그인을 처리   
-
-> ## `.userInfoEndpoint()`  
-  OAuth 2.0 로그인을 통해 사용자 정보를 얻을 때 사용되는 엔드포인트를 설정   
-
-> ## `.userService(oAuth2DetailsService)`  
-  OAuth 2.0 로그인 후에 사용자 정보를 처리하는데 사용되는 사용자 서비스를 지정   
 
 <br>
 
