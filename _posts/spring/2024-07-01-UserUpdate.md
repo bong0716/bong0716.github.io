@@ -3,7 +3,7 @@ layout: post
 title: "[Spring] 회원정보 수정 구현"
 date: 2024-07-01 10:00:23 +0900
 categories: "Spring"
-tag: ["Spring", "Security"]
+tag: ["Spring", "Security", "Photogram"]
 ---  
 
 아이티윌의 국비지원 [스프링부트 SNS 포토그램 프로젝트] 강의를 수강하며 정리한 내용입니다.

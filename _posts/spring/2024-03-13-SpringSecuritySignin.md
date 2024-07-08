@@ -3,7 +3,7 @@ layout: post
 title: "[Spring] 회원가입 기능 구현하기(2) - 비밀번호 암호화"
 date: 2024-03-13 10:00:23 +0900
 categories: "Spring"
-tag: Spring
+tag: ["Spring", "Photogram"]
 ---  
 아이티윌의 국비지원 [스프링부트 SNS 포토그램 프로젝트] 강의를 수강하며 정리한 내용입니다.
 
