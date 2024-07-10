@@ -83,3 +83,27 @@ Controller는 Model과 View를 연결하는 부분으로, 사용자가 어떠한
 <br> 
 
 MVC 패턴은 각 부분이 서로 독립적으로 구성되어 유지보수 및 확장이 용이하며, 코드의 가독성과 유지보수성을 높여주는 장점이 있다.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
+     crossorigin="anonymous"></script>
+<!-- 4 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3561381376929023"
+     data-ad-slot="5661901813"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3561381376929023"
+     data-ad-slot="1405810651"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
