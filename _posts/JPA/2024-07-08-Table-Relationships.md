@@ -7,6 +7,18 @@ tag: JPA
 ---  
 
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3561381376929023"
+     data-ad-slot="1405810651"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ### 연관관계란❓
 **엔티티 간의 관계를 정의하고 관리**하는 것을 의미한다.
 

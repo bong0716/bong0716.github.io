@@ -6,6 +6,18 @@ categories: "JavaScript"
 tag: ["JavaScript", "svg"]
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3561381376929023"
+     data-ad-slot="1405810651"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ![cytologo](https://github.com/bong0716/photogram/assets/119990564/d3c6d9d1-93ee-4270-b429-0f6cee4139fd)
 
 <br>

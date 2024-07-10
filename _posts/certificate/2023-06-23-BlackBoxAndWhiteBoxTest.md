@@ -6,6 +6,18 @@ categories: "Certificate"
 tag: Study
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3561381376929023"
+     data-ad-slot="1405810651"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 # 1. 테스트 기법   
 ### (1) 블랙박스 테스트(Black-Box Test) 또는 명세 기반 테스트?   
 프로그램 내부 논리 구조를 참조하지 않고, 사용자의 요구사항이나 설계 명세 등을 이용하여 테스트 케이스를 개발하는 방법.
