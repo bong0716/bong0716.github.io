@@ -19,6 +19,7 @@ tag: JPA
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+
 ### 연관관계란❓
 **엔티티 간의 관계를 정의하고 관리**하는 것을 의미한다.
 

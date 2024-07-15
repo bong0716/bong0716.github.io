@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Spring] 구독/구독취소 구현"
+title: "[Springboot] 포토그램 구독/구독취소 구현"
 date: 2024-07-08 10:00:23 +0900
-categories: ["Spring", "Photogram"]
-tag: Spring
+categories: "Springboot"
+tag: ["Springboot", "Photogram"]
 ---  
 
 아이티윌의 국비지원 [스프링부트 SNS 포토그램 프로젝트] 강의를 수강하며 정리한 내용입니다.
@@ -158,3 +158,6 @@ public class SubscribeApiController {
 
 ![image](https://github.com/bong0716/photogram/assets/119990564/170d61d9-7955-4f10-97c8-27f4fde34be5)    
 DB에도 구독정보 삽입되는지 확인!
+
+
+

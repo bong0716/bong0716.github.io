@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Spring] Model을 활용해 데이터 전달 및 출력하기"
+title: "[Springboot] Model을 활용해 데이터 전달 및 출력하기"
 date: 2024-03-03 10:00:23 +0900
-categories: "Spring"
-tag: ["Spring", "Photogram"]
+categories: "Springboot"
+tag: ["Springboot", "Photogram"]
 ---  
 아이티윌의 국비지원 [스프링부트 SNS 포토그램 프로젝트] 강의를 수강하며 정리한 내용입니다.
 

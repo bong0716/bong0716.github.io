@@ -8,12 +8,13 @@ tag: ["JavaScript", "svg"]
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
      crossorigin="anonymous"></script>
+<!-- 수평형 광고 -->
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
+     style="display:block"
      data-ad-client="ca-pub-3561381376929023"
-     data-ad-slot="1405810651"></ins>
+     data-ad-slot="4263708596"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
