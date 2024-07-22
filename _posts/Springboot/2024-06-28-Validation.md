@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Springboot] 전/후처리 개념 및 유효성 검사 - AOP"
+title: "[Springboot] 전/후처리 개념 및 유효성 검사 - 회원가입"
 date: 2024-06-28 13:00:23 +0900
 categories: "Springboot"
 tag: ["Springboot", "Validation", "Photogram"]
@@ -28,7 +28,7 @@ tag: ["Springboot", "Validation", "Photogram"]
 **관점지향프로그래밍**이란 뜻으로, 프로그램의 여러 부분에서 **공통적으로 사용되는 기능이나 로직을 분리하여 모듈화**하는 방법을 의미하는 SW개발 패러다임 중 하나다.    
 - 핵심기능 : 처리해야 할 중요한 로직
 - 공통기능 : 없어도 되지만 더 나은 핵심기능을 위해 추가로 넣는 로직   
-ex) 회원가입(핵심기능)을 위한 전처리와 후처리(공통기능)를 서비스로직이 아닌 따로 처리하는 것. 
+**ex)** 회원가입(핵심기능)을 위한 전처리와 후처리(공통기능)를 서비스로직이 아닌 따로 처리하는 것. 
 
 <br>
 
@@ -44,33 +44,11 @@ ex) 회원가입(핵심기능)을 위한 전처리와 후처리(공통기능)를
 
 <br>
 
-```java
-@PostMapping("/auth/signup")
-	public String signup(@Valid SignupDto signupDto, BindingResult bindingResult) {
-		
-		if(bindingResult.hasErrors()) {
-			Map<String, String> errorMap = new HashMap<>();
-			
-			for(FieldError error : bindingResult.getFieldErrors()) {
-				errorMap.put(error.getField(), error.getDefaultMessage());
-			}
-			throw new CustomValidationException("유효성 검사 실패함", errorMap);
-		} else {
-			User user = signupDto.toEntity();
-			authService.회원가입(user);
-			return "/auth/signin";
-		}
-	}
-```
-컨트롤러에 `@Valid` 및 `BindingResult` 추가   
-`@Valid`에서 발생한 에러는 `bindingResult`의 `getFiledErrors`라는 컬렉션에 모아진다.    
-모아진 에러를 errorMap에 담아 CustomValidationException가 낚아채도록 한다.  
+이제 회원가입을 예시로 유효성 검사를 진행할 것이다.   
 
-+ 예외를 가로챌 ControllerExceptionHandler 클래스는 생성해주어야 한다. (아래에 계속)   
-+ `throw new CustomValidationException("유효성 검사 실패함", errorMap);`에서 String과 Map을 같이 응답하기 위해 CMRespDto라는 응답 Dto를 생성해주어댜 한다.
+## 1. 회원가입 구현 
 
----
-
+### **[SignupDto.java]**
 ```java
 @Data
 public class SignupDto {
@@ -95,10 +73,45 @@ public class SignupDto {
 	}
 }
 ```
-Dto에서 각 데이터에 맞는 검증 어노테이션 추가 
+DTO에서 객체의 각 필드에 검증사항을 작성한다. (Repository -> DB까지 넘어가지 않도록!)   
+`@NotBlank` : 비어있지 않은지 검증. null, 공백, 스페이스 값 모두 허용하지 않음.   
+
+<br>
+Controller에서 `@Valid` 어노테이션을 통해 유효성 검증 어노테이션이 추가된 DTO 클래스의 유효성 검증 로직이 실행된다.  
 
 ---
 
+### **[AuthController.java]**
+```java
+@PostMapping("/auth/signup")
+	public String signup(@Valid SignupDto signupDto, BindingResult bindingResult) {
+		
+		if(bindingResult.hasErrors()) {
+			Map<String, String> errorMap = new HashMap<>();
+			
+			for(FieldError error : bindingResult.getFieldErrors()) {
+				errorMap.put(error.getField(), error.getDefaultMessage());
+			}
+			throw new CustomValidationException("유효성 검사 실패함", errorMap);
+		} else {
+			User user = signupDto.toEntity();
+			authService.회원가입(user);
+			return "/auth/signin";
+		}
+	}
+```
+컨트롤러에 `@Valid` 및 `BindingResult` 추가한다.   
+- `@Valid` : 객체의 필드에 달린 제약조건에 대해 검증한다.   
+`@Valid`에서 발생한 에러는 `bindingResult`의 `getFiledErrors`라는 컬렉션에 모아진다.    
+📌 @Valid 바로 뒤⭐️에 BindingResult를 붙여야 에러가 정상적으로 파라미터에 넘겨진다.    
+모아진 에러를 errorMap에 담아 CustomValidationException가 낚아채도록 한다.  
+
++ 예외를 가로챌 ControllerExceptionHandler 클래스는 생성해주어야 한다. (아래에 계속)   
++ `throw new CustomValidationException("유효성 검사 실패함", errorMap);`에서 String과 Map을 같이 응답하기 위해 CMRespDto라는 응답 DTO를 생성해주어야 한다.
+
+---
+
+### **[User.java]**
 ```java
 @AllArgsConstructor
 @NoArgsConstructor
@@ -139,8 +152,8 @@ public class User {
 	}
 }
 ```
-도메인에서 각 데이터에 맞는 검증 어노테이션 추가   
-(여기선 Valid가 아니라 javax.persistance에 있는 어노테이션임)
+도메인에서 각 데이터에 검증 어노테이션을 추가한다.      
+(Valid가 아니라 javax.persistance에 있는 어노테이션이다!)
 
 <br>
 
@@ -148,21 +161,7 @@ public class User {
 
 ---
 
-### **[ControllerExceptionHandler.java]**
-```java
-@RestController
-@ControllerAdvice // 모든 Exception을 낚아챔
-public class ControllerExceptionHandler {
-
-	@ExceptionHandler(CustomValidationException.class) // RuntimeException이 발생하는 모든 예외를 가로챔
-	public CMRespDto<?> validationException(CustomValidationException e) {
-		return new CMRespDto<Map<String, String>>(-1, e.getMessage(), e.getErrorMap());
-	}
-}
-```
-handler 패키지를 생성 후 ControllerExceptionHandler를 생성해준다.    
-
-<br>
+## 2. 사용자 정의 예외 클래스 생성
 
 ### **[CustomValidationException.java]**
 ```java
@@ -184,8 +183,9 @@ public class CustomValidationException extends RuntimeException {
 	}
 }
 
-```
-handler 패키지 안에 ex라는 패키지를 생성하고 CustomValidationException 클래스를 생성해준다. 
+```  
+handler 패키지 안에 ex라는 패키지를 생성하고 CustomValidationException 클래스를 생성해준다.    
+해당 클래스는 RuntimeException 클래스를 상속받아 런타임 예외를 처리해준다.   
 
 <br>
 
@@ -200,7 +200,23 @@ public class CMRespDto<T> {
 	private T data;
 }
 ```
-CMRespDto는 전역적으로 쓰이기 때문에 타입을 T로 설정해 ErrorMap, User 오브젝트, String 등을 받을 수 있도록 한다. 
+CMRespDto는 전역적으로 쓰이기 때문에 타입을 T로 설정해 ErrorMap, User 오브젝트, String 등을 받을 수 있도록 한다.
+
+
+### **[ControllerExceptionHandler.java]**
+```java
+@RestController
+@ControllerAdvice // 모든 Exception을 낚아챔
+public class ControllerExceptionHandler {
+
+	@ExceptionHandler(CustomValidationException.class) // RuntimeException이 발생하는 모든 예외를 가로챔
+	public CMRespDto<?> validationException(CustomValidationException e) {
+		return new CMRespDto<Map<String, String>>(-1, e.getMessage(), e.getErrorMap());
+	}
+}
+```
+handler 패키지를 생성 후 ControllerExceptionHandler를 생성해준다. (사용자 정의 예외를 처리하는 글로벌 예외 처리기)     
+`@ControllerAdvice` : 모든 컨트롤러에서 발생하는 예외를 처리하도록 설정.
 
 <br>
 
