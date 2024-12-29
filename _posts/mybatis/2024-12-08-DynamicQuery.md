@@ -53,7 +53,8 @@ tag: ["MyBatis", "DynamicQuery"]
 
 ### **`<choose>`, `<when>`, `<otherwise>`**
 Switch문처럼 여러 조건 중 하나를 선택한다.   
-참인 조건이 나오면 그 조건만 실행하고 종료된다는 점에서 if문과 다르다. 
+참인 조건이 나오면 그 조건만 실행하고 종료된다는 점에서 if문과 다르다.    
+3개의 태그가 한 세트이므로 하나의 태그라도 빠지면 오류난다.  
 ``` xml
 <select id="findUsers" parameterType="userDto" resultType="User">
      SELECT *
@@ -176,6 +177,10 @@ UPDATE문에서 동적으로 컬럼을 설정하며, 불필요한 쉼표(,)를 �
      WHERE ID = #{id}
 </update>
 ```
+
+---
+CDATA로 묶으면 동적쿼리 작동 안하니 주의! 
+
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561381376929023"
      crossorigin="anonymous">
